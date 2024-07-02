@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 const Botao = styled.button`
@@ -16,11 +15,20 @@ const Botao = styled.button`
         background-color: transparent;
         cursor: pointer;
         transition: all .3s ease-in-out;
+        will-change: filter;
+    }
+
+    &.ativo {
+        color: var(--cor-primaria);
+        background-color: var(--cor-preta);
+        border-color: var(--cor-primaria);
     }
 
     &.cta:hover {
         color: var(--cor-primaria);
+        background-color: var(--cor-preta);
         border-color: var(--cor-primaria);
+        filter: drop-shadow(0 0 2em #61dafbaa);
     }
 
     //TABLET
@@ -38,12 +46,13 @@ const Botao = styled.button`
     }
 `;
 
-export const BotaoCTA = () => {
-    const [count, setCount] = useState(0);
+export const BotaoCTA = ({...props}) => {
+    const { classe, funcao, child } = props;
 
-    function contador() {
-        setCount((count) => count + 1);
-    }
-
-    return <Botao className="cta" onClick={contador}>Contador em {count}</Botao>
+    return (
+        <Botao 
+            className={`cta ${classe ? classe : ""}`} 
+            onClick={funcao}
+        >{child}</Botao>
+    );
 }

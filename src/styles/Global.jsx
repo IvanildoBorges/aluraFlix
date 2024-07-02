@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
         align-items: flex-start;
         justify-content: center;
         min-width: 320px;
-        min-height: 100vh;
+        min-height: 100dvh;
         
         color-scheme: light dark;
         color: var(--cor-bg-light);
@@ -85,20 +85,16 @@ const GlobalStyle = createGlobalStyle`
 
     /* ------------- REUSABLE COMPONENTS ------------- */
     /* ===== SECTION ===== */
-
+    .section {
+        display: flex;
+        width: 100dvw;
+    }
 
     /* ===== Container ===== */
-
-
-    /* ===== Logo ===== */
-    .logo {
-        height: 2.5rem;
-        width: 10.5rem;
-        will-change: filter;
-        transition: filter 300ms;
-    }
-    .logo:hover {
-        filter: drop-shadow(0 0 2em #61dafbaa);
+    .container {
+        display: flex;
+        width: 100%;
+        margin: 0px 42px;
     }
 `;
 
