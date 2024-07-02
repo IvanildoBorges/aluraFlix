@@ -38,6 +38,12 @@ export const BannerContainer = styled.div`
         height: 30rem;
         border-radius: 16px;
         border: 4px solid var(--cor-primaria);
+        transition: filter .3s ease-in-out;
+        filter: drop-shadow(0 0 1em #61dafbaa);
+    }
+
+    &.container iframe:hover {
+        filter: drop-shadow(0 0 2em #61dafbaa);
     }
 `;
 
@@ -46,6 +52,7 @@ export const WrapperText = styled.div`
         display: flex;
         flex-direction: column;
         width: 50%;
+        height: fit-content;
         gap: 10px;
     }
 `;
