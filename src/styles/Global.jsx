@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
         
         font-family: var(--fonte-family);
         font-size: var(--fonte-texto);
-        font-weight: 400;
+        font-weight: 300;
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
