@@ -1,2 +1,3 @@
-# aluraFlix
-Projeto frontend de um streaming de video em React
+# AluraFlix
+
+Construindo a interface do usuário do streamming de vídeo com ReactJS no frontend.

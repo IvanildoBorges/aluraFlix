@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 16px;
+
+  --cor-primaria: #2271D1;
+  --cor-secundaria: #F5F5F5;
+  --cor-terciaria: rgba(34, 113, 209, 0.239);
+  --cor-bg-dark: #262626;
+  --cor-bg-light: #F5F5F5;
+  --cor-preta: rgba(0, 0, 0, .9);
+  --cor-branca: #FFFFFF;
+  --cor-link: #535bf2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 1rem;
+
+  color-scheme: light dark;
+  color: var(--cor-bg-light);
+  background-color: var(--cor-bg-dark);
+}
+
+.logo {
+  height: 2.5rem;
+  width: 10.5rem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--cor-bg-dark);
+    background-color: var(--cor-branca);
+  }
+}
